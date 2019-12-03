@@ -1,0 +1,93 @@
+---
+title: "Segundo Parcial - Data Mining"
+author: "Diaz, Carlos Antonio - Lazarte, Martin"
+output:
+  html_notebook:
+    df_print: paged
+    fig:height: 4
+    fig:width: 6
+    toc: yes
+    toc_float: yes
+  html_document:
+    df_print: paged
+    toc: yes
+---
+
+# 1 Carga del data_set
+
+```{r}
+equipo <- read.csv("C:/Users/Tony/Documents/R/2do Parcial/data.csv")
+
+```
+
+# 2 Bibliotecas
+
+    Las bibliotecas que utilizaremos
+    
+```{r}
+library(corrplot)
+library(rpart)
+library(rpart.plot)
+library(caret)
+library(dplyr)
+library(fastDummies)
+library(psych)
+library(leaps)
+library(ISLR)
+library(knitr)
+library(glmnet)
+library(factoextra)
+library(mosaic)
+library(car)
+library(lmtest)
+
+```
+# 3 Data_Set sin limpiar y sin filtro
+
+```{r}
+summary(equipo)
+str(equipo)
+```
+# 4 contar nulos por columnas
+```{r}
+summarise_all(equipo, funs(sum(is.na(.))))
+
+```
+## 4.1 Eliminar nulos
+
+    podemos observar que lugo de la eliminacion de nulos 
+    quedan 18207 obs. of  89 variables
+    orig   18147 obs. of  89 variables
+```{r}
+equiposinnulos <- equipo
+equiposinnulos <- na.omit(equiposinnulos)
+summary(equiposinnulos)
+str(equiposinnulos)
+
+```
+
+
+# 5 contar vacios 
+```{r}
+
+```
+## 5.1 reemplazar vacios
+      
+      
+      lo que realizaremos en reemplazar los valores nulos por el primer quartil
+```{r}
+
+```
+```{r}
+
+```
+```{r}
+
+```
+```{r}
+
+```
+
+
+
+
